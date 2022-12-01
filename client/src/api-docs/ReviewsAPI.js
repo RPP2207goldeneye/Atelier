@@ -19,6 +19,7 @@ module.exports.getReviews = (product_id, page = 1, count = 5, sort = 'newest') =
     })
 }
 
+
 module.exports.getMetadata = (product_id) => {
   options.url = `https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp/reviews/meta/?product_id=${product_id}`;
   return axios(options)
