@@ -18,7 +18,7 @@ import { Question } from "../QuestionsComponents/Question.jsx";
 import { QuestionsList } from "../QuestionsComponents/QuestionsList.jsx";
 import { SearchQuestions } from "../QuestionsComponents/SearchQuestions.jsx";
 
-import { productData } from "../../../../../dummyTestData/productData.js";
+import productData from "../../../../../dummyTestData/productDummy.js";
 
 describe('Unit: Initial rendering of all Questions components', () => {
 
