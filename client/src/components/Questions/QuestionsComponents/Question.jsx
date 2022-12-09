@@ -26,7 +26,7 @@ export const Question = (props) => {
   }
 
   return (
-    <div className={Question}>
+    <div className="Question">
       <h4>Q: {props.data.question_body}</h4>
       <p>Helpful? <button onClick={handleQHelpfulness}>Yes</button>{props.data.question_helpfulness}</p>
       <AnswerList questionId={props.data.question_id} />

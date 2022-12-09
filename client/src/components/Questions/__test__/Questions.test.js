@@ -1,4 +1,6 @@
-/** @jest-environment jsdom */
+/**
+ * @jest-environment jsdom
+ */
 
 import { fireEvent, render, screen } from '@testing-library/react'
 import { queries } from '@testing-library/dom'
@@ -16,12 +18,16 @@ import { Question } from "../QuestionsComponents/Question.jsx";
 import { QuestionsList } from "../QuestionsComponents/QuestionsList.jsx";
 import { SearchQuestions } from "../QuestionsComponents/SearchQuestions.jsx";
 
+import { productData } from "../../../../../dummyTestData/productData.js";
 
-// test("Renders QuestionsList Widget without crashing", ()=> {
-//   render(<Questions />)
-//   const QCompElement = screen.queryBy('Questions')
-//   expect(QCompElement).toBeInTheDocument()
-// })
+describe('Unit: Initial rendering of all Questions components', () => {
+
+
+test("Renders QuestionsList Widget without crashing", ()=> {
+  render(<Questions productNum={71700} product={productData}/>)
+  const QCompElement = screen.getByText('Questions & Answers')
+  expect(QCompElement).toBeInTheDocument()
+})
 
 // it("SHALLOW: renders AddAnswer Widget without crashing", ()=> {
 //   shallow(<AddAnswer />);
@@ -51,3 +57,4 @@ import { SearchQuestions } from "../QuestionsComponents/SearchQuestions.jsx";
 //   shallow(<SearchQuestions />);
 // });
 
+})
