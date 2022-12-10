@@ -12,7 +12,7 @@ const [moreQs, addQs] = useState(2);
   }
 
   return (
-    <div style={{color: 'blue'}} data-testid="QuestionsList Component" className="QuestionsList">
+    <div style={{color: 'blue'}} data-testid="QuestionsList Component" className="QuestionsList" data-testid="QuestionsList">
 
       {props.returnedQs.filter(data => data.question_body.match(new RegExp(props.searchQ, "u")))
       .slice(0, moreQs)?.map((data, idx)=> (<Question data={data} key={idx} productNum={props.productNum} product={props.product} setQs={props.setQs}/>)) }

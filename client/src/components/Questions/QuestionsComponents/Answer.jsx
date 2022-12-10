@@ -35,7 +35,7 @@ export const Answer = (props) => {
 
 
   return (
-    <div>
+    <div data-testid="Answer">
       <p>A: {props.answerData.body}</p>
       <p>by: {props.answerData.answerer_name}</p>
       <p>Helpful? <button onClick={handleAHelpfulness}>Yes</button>{props.answerData.helpfulness}</p>

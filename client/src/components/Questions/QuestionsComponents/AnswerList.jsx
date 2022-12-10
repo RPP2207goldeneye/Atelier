@@ -28,7 +28,7 @@ const resetAlist = () => {
 }
 
   return (
-    <div className="answersList">
+    <div className="answersList" data-testid="AnswerList">
       {/* <h3>Answers</h3> */}
       {returnedAs.slice(0, moreAs)?.map((answerData, idx)=> <Answer answerData={answerData} key={idx} setAs={setAs} questionId={props.questionId}/>)}
 

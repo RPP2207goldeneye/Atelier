@@ -3,7 +3,7 @@ import React, {useState} from "react";
 export const SearchQuestions = (props) => {
 
   return (
-    <div style={{color: 'red'}}>
+    <div style={{color: 'red'}} data-testid="SearchComponent">
       <input
       type="text"
       placeholder="Have a question? Search for answers…"
